@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+*,
+*,
+::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.full-height-grow {
+    display:flex;
+    flex-direction: column;
+}
+
+.anniversary-logo img {
+    position: absolute; /* Position relative to the parent container */
+    top: 12%; /* Adjust the vertical position */
+    left: 6%; /* Adjust the horizontal position */
+    width: 10%; /* Adjust the size dynamically */
+    transform: translate(-50%, -50%) rotate(-20deg); /* Center and rotate */
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #2F303A;
+    font-family: Poppins, sans-serif;
+    font-size: 1.2rem;
+    min-height: 100vh;
+}
+
+.main-nav ul {
+    display: flex; /*Display is flexable across different resolutions*/
+    justify-content: flex-end;
+    margin: 0;
+    padding: 1.5rem;
+    list-style: none;
+}
+
+.main-nav a {
+    color: transparent; /* Makes the text transparent so the gradient shows */
+    background-image: linear-gradient(to right, #ff00b3, #6200ff, #00ff2a); /* Initial gradient colors */
+    background-clip: text; /* Clips the gradient to the text */
+    -webkit-background-clip: text; /* Ensures compatibility with WebKit browsers */
+    text-decoration: none; /* no underline*/
+    padding: 1rem; /* space between elements, Memories and Anniversary Timer */
+    animation: gradiant-animation
+     8s infinite; /* Applies the animation */
+    background-size: 300%; /* Makes the gradient larger for smooth movement */
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    color: #0cb4e7; /*adds a different color when hovering over the link */
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.backgrounder-image {
+    position: fixed; /* Stays in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/backgrounders.png'); /* Path to your image */
+    background-size: cover; /* Ensures the entire image is visible */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-position: top center; /* Aligns the image to the top center */
+    z-index: -1; /* Places it behind other elements */
+}
+
+.title {
+    color: transparent; /* Makes the text transparent so the gradient shows */
+    background-image: linear-gradient(to right, #ff00b3, #6200ff, #00ff2a); /* Initial gradient colors */
+    background-clip: text; /* Clips the gradient to the text */
+    -webkit-background-clip: text; /* Ensures compatibility with WebKit browsers */
+    font-size: 6vw; /* Scales dynamically with the viewport width */
+    text-align: center;
+    margin-top: -3rem;
+    font-weight: 500;
+    animation: gradiant-animation 8s infinite; /* Applies the animation */
+    background-size: 300%; /* Makes the gradient larger for smooth movement */
+}
+
+.dumpling-image {
+    position: absolute;
+    top: 77%;
+    left: 20%;
+    width: 12vw; /* Scales dynamically with the viewport width */
+    z-index: 11; /* Ensure it appears above the base image */
+}
+
+.chopstick-image {
+    position: absolute;
+    top: 70%;
+    left: 25%;
+    width: 10vw; /* Scales dynamically with the viewport width */
+    transform: rotate(360deg); /* Rotates the image */
+    z-index: 10; /* Ensure it appears above the base image */
+}
+
+.steak-image {
+    position: absolute;
+    top: 73%;
+    left: 75%;
+    width: 15vw; /* Scales dynamically with the viewport width */
+}
+
+.heart2-image {
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    width: 10vw;
+    transform: rotate(15deg);
+}
+
+.message1 {
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    transform: rotate(-10deg);
+    font-size: 2vw; /* Scales dynamically with the viewport width */
+    color: transparent; /* Makes the text transparent so the gradient shows */
+    background-image: linear-gradient(to right, #00ccff, #ff0000); /* Initial gradient colors */
+    background-clip: text; /* Clips the gradient to the text */
+    -webkit-background-clip: text; /* Ensures compatibility with WebKit browsers */
+    animation: gradiant-animation 1.5s infinite; /* Applies the animation */
+    background-size: 300%; /* Makes the gradient larger for smooth movement */
+}
+
+.message2 {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: rotate(20deg);
+    font-size: 2vw;
+    color: transparent; /* Makes the text transparent so the gradient shows */
+    background-image: linear-gradient(to right, #00ccff, #ff0000); /* Initial gradient colors */
+    background-clip: text; /* Clips the gradient to the text */
+    -webkit-background-clip: text; /* Ensures compatibility with WebKit browsers */
+    animation: gradiant-animation 8s infinite; /* Applies the animation */
+    background-size: 300%; /* Makes the gradient larger for smooth movement */
+}
+
+@keyframes gradiant-animation
+ {
+        0% {
+            background-position: 0% 50%; /* Start position */
+        }
+        50% {
+            background-position: 100% 50%; /* Middle position */
+        }
+        100% {
+            background-position: 0% 50%; /* End position (loops back) */
+        }
+    }

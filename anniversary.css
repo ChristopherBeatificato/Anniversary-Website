@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+*,
+*,
+::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #2F303A;
+    font-family: Poppins, sans-serif;
+    font-size: 1.2rem;
+    min-height: 100vh;
+}
+
+.anniversary-nav ul {
+    display: flex; /* Arrange the list items horizontally */
+    justify-content: flex-end; /* Align items to the right */
+    margin: 0;
+    padding: 1.5rem;
+    list-style: none; /* Remove default bullet points */
+}
+
+.anniversary-nav a {
+    color: transparent; /* Makes the text transparent so the gradient shows */
+    background-image: linear-gradient(to right, #ff00b3, #6200ff, #00ff2a); /* Initial gradient colors */
+    background-clip: text; /* Clips the gradient to the text */
+    -webkit-background-clip: text; /* Ensures compatibility with WebKit browsers */
+    text-decoration: none; /* Remove underline */
+    padding: 1rem; /* Add spacing around the links */
+    font-weight: bold;
+    animation: gradiant-animation 8s infinite; /* Applies the animation */
+    background-size: 300%; /* Makes the gradient larger for smooth movement */
+}
+
+.anniversary-nav a:hover {
+    color: #0cb4e7; /*adds a different color when hovering over the link */
+}
+
+.anniversary-header {
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    align-items: center; /* Vertically center the navigation */
+    position: relative; /* Ensure proper positioning */
+}
