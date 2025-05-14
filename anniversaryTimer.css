@@ -31,8 +31,43 @@ body {
     text-decoration: none; /* Remove underline */
     padding: 1rem; /* Add spacing around the links */
     font-weight: bold;
-    animation: gradiant-animation 8s infinite; /* Applies the animation */
+    animation: gradient-animation 8s infinite; /* Applies the animation */
     background-size: 300%; /* Makes the gradient larger for smooth movement */
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #2F303A;
+    font-family: Poppins, sans-serif;
+    font-size: 1.2rem;
+    min-height: 100vh;
+    background-image: url('images/anniversaryTimer/AnniversaryBackground.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.timer-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; /* Adjust as needed for spacing below nav */
+}
+
+#countdown {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem auto;
+    color: transparent;
+    background-image: linear-gradient(to right, #ff00b3, #6200ff, #00ff2a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    display: block;
+    width: 100%;
+    background-size: 300%;
+    animation: gradient-animation 8s infinite; /* <-- Add this line */
 }
 
 .anniversary-nav a:hover {
@@ -44,4 +79,16 @@ body {
     justify-content: flex-end; /* Align content to the right */
     align-items: center; /* Vertically center the navigation */
     position: relative; /* Ensure proper positioning */
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
