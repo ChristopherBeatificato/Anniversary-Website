@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 *,
 *,
@@ -17,6 +18,25 @@ body {
 
 /*gizards*/
 
+.memories-background {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    z-index: -1;
+}
+
+.memories-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .memories-nav ul {
     display: flex; /* Arrange the list items horizontally */
     justify-content: flex-end; /* Align items to the right */
@@ -33,7 +53,7 @@ body {
     text-decoration: none; /* Remove underline */
     padding: 1rem; /* Add spacing around the links */
     font-weight: bold;
-    animation: gradiant-animation 8s infinite; /* Applies the animation */
+    animation: gradient-animation 8s infinite; /* Applies the animation */
     background-size: 300%; /* Makes the gradient larger for smooth movement */
 }
 
@@ -46,4 +66,16 @@ body {
     justify-content: flex-end; /* Align content to the right */
     align-items: center; /* Vertically center the navigation */
     position: relative; /* Ensure proper positioning */
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
